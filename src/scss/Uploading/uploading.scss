@@ -1,0 +1,202 @@
+$myBtnColor: #7f55da;
+$textColor: #303642;
+$ptextColor: #7e8492;
+$LinkColor: #6c589e;
+
+@mixin btn {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+@mixin myClass {
+  background-color: #fff;
+  box-shadow: 2px 3px 20px #f1eeee;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 1.4rem;
+  width: 65%;
+}
+
+@mixin smallDevice {
+  margin: 15px;
+  padding: 15px;
+}
+
+.UploadingInfo {
+  width: 100%;
+  transition: 0.3s ease-in-out;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .row {
+      width: 1280px;
+    }
+  }
+  .contactForm {
+    background-color: #fff;
+    box-shadow: 1px 1px 20px #f1eeee6e;
+    padding: 25px;
+    border: 0.5px solid #f0f0f0;
+    border-radius: 12px;
+    position: relative;
+
+    .signinBtn {
+      position: absolute;
+      left: 20%;
+      bottom: 25px;
+    }
+    h3 {
+      font-weight: 600;
+      font-size: 24px;
+    }
+    .inputbox {
+      margin: 13px 0;
+      padding: 8px 10px;
+      border: 0.5px solid #f0f0f0;
+      background-color: #f7f6fe;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+
+      .label {
+        align-items: center;
+        border: 2px dashed #6990f2;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        height: 168px;
+        justify-content: center;
+        margin: 30px 0;
+      }
+      label {
+        font-weight: 600;
+        font-size: 14px;
+        color: $LinkColor;
+      }
+
+      textarea {
+        resize: none;
+        height: 100px;
+      }
+      input,
+      textarea {
+        outline: none;
+        border: none;
+        background-color: transparent;
+        &::placeholder {
+          font-size: 13px;
+
+          color: $ptextColor;
+        }
+      }
+    }
+
+    button {
+      @include btn();
+      background-color: $myBtnColor;
+      color: #fff;
+      padding: 5px 18px;
+      box-shadow: 2px 4px 32px #6c589e8c;
+    }
+    .toolButton {
+      background-color: $textColor;
+    }
+  }
+
+  .emai {
+    background-color: #fff;
+    box-shadow: 3px 3px 20px #f1eeee6e;
+    border: 0.5px solid #f0f0f0;
+    padding: 12px;
+    border-radius: 5px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    .icons {
+      width: 35px;
+      height: 35px;
+      background-color: #f7f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      color: #7f55da;
+    }
+    p {
+      display: flex;
+      flex-direction: column;
+      span {
+        font-weight: 700;
+
+        &:nth-child(2) {
+          color: $myBtnColor;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .UploadingInfo {
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow-x: hidden;
+
+    .container {
+      margin-top: 5rem;
+      .row {
+        width: 100% !important;
+        .infoContent {
+          width: 100%;
+          padding-left: 10px;
+          padding-right: 10px;
+
+          .emai {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .UploadingInfo {
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow-x: hidden;
+
+    .container {
+      margin-top: 5rem;
+      .row {
+        width: 100% !important;
+
+        .emai {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .UploadingInfo {
+    max-width: 100% !important;
+
+    .container {
+      margin-top: 5rem;
+
+      .row {
+        width: 100% !important;
+
+        .emai {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

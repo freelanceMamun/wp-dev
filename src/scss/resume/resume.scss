@@ -1,0 +1,490 @@
+$myBtnColor: #7f55da;
+$textColor: #303642;
+$ptextColor: #7e8492;
+$LinkColor: #6c589e;
+@mixin smallDevice {
+  width: initial;
+  margin: 15px;
+  padding: 15px;
+}
+
+@mixin myClass {
+  background-color: #fff;
+  box-shadow: 2px 3px 20px #f1eeee;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 1.4rem;
+  width: 65%;
+}
+@mixin icons {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #faf6f6;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+.AboutSection {
+  width: 100%;
+  transition: 0.3s ease-in-out;
+
+  // sortAbout
+  .About {
+    @include myClass();
+    width: 65%;
+    padding: 20px;
+    margin-top: 5rem;
+
+    .aboutInfo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .info_content {
+        display: flex;
+        gap: 13px;
+        align-items: center;
+        padding-bottom: 10px;
+        padding-top: 10px;
+
+        .MeImg {
+          width: 50px;
+          box-shadow: 2px 3px 25px #f1eeeeee;
+          height: 50px;
+          border-radius: 50%;
+          img {
+            width: 100%;
+          }
+        }
+        .MeTitle {
+          h4 {
+            font-weight: 600;
+            font-size: 22px;
+          }
+          p {
+            color: $textColor;
+            font-weight: 500;
+          }
+        }
+      }
+      .socilaBtn {
+        button {
+          background-color: $myBtnColor;
+          color: #fff;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+        }
+      }
+    }
+    .aboutNotesBtn {
+      .note_btn {
+        padding-top: 5px;
+        padding-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        button {
+          font-weight: 500;
+          border: none;
+          outline: none;
+          padding: 8px 15px;
+          display: flex;
+          align-items: center;
+          color: $ptextColor;
+          &:nth-child(1) {
+            background-color: $myBtnColor;
+            color: #fff;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+  .PersonalInfomatios {
+    @include myClass();
+
+    padding: 20px;
+    h5 {
+      font-weight: 600;
+    }
+
+    .informations {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 5px;
+      padding-bottom: 5px;
+
+      .info_content {
+        display: flex;
+        gap: 12px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        .icons {
+          background-color: #f0f0f3;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 35px;
+          height: 35px;
+          border-radius: 5px;
+          svg {
+            font-size: 21px;
+          }
+        }
+        .info {
+          h6 {
+            font-weight: 600;
+            color: $textColor;
+          }
+          p {
+            color: $ptextColor;
+          }
+        }
+      }
+    }
+  }
+
+  .ResumeCV {
+    @include myClass();
+    padding: 20px;
+    h5 {
+      font-weight: 600;
+    }
+
+    .cvFile {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 15px;
+      margin-bottom: 10px;
+
+      .filename {
+        display: flex;
+        gap: 10px;
+        .icons {
+          background-color: #f0f0f3;
+          width: 35px;
+          height: 35px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+        }
+        .name {
+          font-weight: 700;
+          font-size: 17px;
+        }
+      }
+      .downloadBtn {
+        a {
+          outline: none;
+          border: none;
+          background-color: $myBtnColor;
+          color: #fff;
+          padding: 8px 15px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  .eductionsInfo {
+    @include myClass();
+    padding: 20px;
+    h5 {
+      font-weight: 600;
+    }
+
+    .edu_info {
+      margin-top: 15px;
+      margin-bottom: 10px;
+
+      display: flex;
+      gap: 12px;
+
+      .edu_logo {
+        width: 50px;
+        height: 50px;
+        img {
+          width: 100%;
+        }
+      }
+      .edu_infoContent {
+        h5 {
+          font-weight: 600;
+          font-size: 19px;
+        }
+        .subtitle {
+          font-size: 15px;
+          color: $textColor;
+          font-weight: 500;
+          margin-bottom: 10px;
+        }
+        .date_place {
+          color: $ptextColor;
+          margin-top: 5px;
+          margin-bottom: 5px;
+          span {
+            margin-right: 6px;
+          }
+        }
+      }
+    }
+  }
+  .skillsinfo {
+    @include myClass();
+    padding: 20px;
+
+    h5 {
+      font-weight: 600;
+    }
+    .skillsBtn {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      button {
+        margin-right: 8px;
+        margin-bottom: 8px;
+        border: 0.5px solid #f3eeee;
+        border-radius: 5px;
+        font-weight: 600;
+        transition: 0.5s ease;
+        &:hover {
+          background-color: $myBtnColor;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .language {
+    @include myClass();
+    padding: 20px;
+
+    h5 {
+      font-weight: 600;
+    }
+    .LanguageInfo {
+      display: grid;
+      grid-template-columns: repeat(3, 230px);
+      gap: 10px;
+      user-select: none;
+
+      .langu_info {
+        display: flex;
+        border: 0.5px solid #f3eeee;
+        padding: 8px;
+        margin-top: 10px;
+        gap: 10px;
+        border-radius: 6px;
+
+        .EnCode {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: black;
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .langu_name {
+          h6 {
+            font-weight: 600;
+          }
+          p {
+            color: $ptextColor;
+          }
+        }
+      }
+    }
+  }
+  .positions {
+    @include myClass();
+    padding: 20px;
+
+    h5 {
+      font-weight: 600;
+    }
+    .info_post {
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      .info {
+        border: 0.5px solid #f3eeee;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 55%;
+
+        .text {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 85%;
+          padding: 7px;
+          border-right: 0.5px solid #f3eeee;
+
+          span {
+            color: rgba(12, 182, 12, 0.815);
+            font-size: 18px;
+          }
+        }
+        .status {
+          padding: 7px;
+          span {
+            font-family: Arial, Helvetica, sans-serif !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// .style {
+//   background-color: rgba(247, 245, 242, 0.3);
+//   background-image: linear-gradient(
+//       to right,
+//       rgba(210, 212, 213, 0.3) 1px,
+//       transparent 1px
+//     ),
+//     linear-gradient(rgba(210, 212, 213, 0.3) 1px, transparent 1px);
+// }
+
+@media screen and (max-width: 576px) {
+  .AboutSection {
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow-x: hidden;
+    position: relative;
+
+    .skillsinfo,
+    .positions,
+    .eductionsInfo,
+    .ResumeCV,
+    .PersonalInfomatios,
+    .About {
+      @include smallDevice();
+    }
+
+    .About {
+      margin-top: 5rem;
+      .aboutInfo {
+        flex-direction: column;
+        margin-bottom: 20px;
+        align-items: start;
+
+        .info {
+          .info_content {
+            flex-direction: column;
+            align-items: start;
+
+            .MeImg {
+              width: 100px;
+              height: 100px;
+            }
+          }
+        }
+      }
+      .aboutNotesBtn {
+        .note_btn {
+          flex-wrap: wrap;
+        }
+      }
+    }
+
+    .PersonalInfomatios {
+      .informations {
+        grid-template-columns: 1fr;
+
+        .info_content {
+          width: 100%;
+          flex-direction: column;
+        }
+      }
+    }
+
+    .ResumeCV .cvFile {
+      flex-direction: column;
+    }
+
+    .positions {
+      .info_post {
+        .info {
+          width: 100% !important;
+
+          .text {
+            width: 77%;
+          }
+        }
+      }
+    }
+    .language {
+      @include smallDevice();
+
+      .LanguageInfo {
+        grid-template-columns: repeat(1, 280px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .AboutSection {
+    max-width: 100% !important;
+
+    .skillsinfo,
+    .positions,
+    .eductionsInfo,
+    .ResumeCV,
+    .PersonalInfomatios,
+    .About,
+    .language {
+      @include smallDevice();
+    }
+    .positions {
+      .info_post {
+        .info {
+          width: 100%;
+        }
+      }
+    }
+
+    .About {
+      margin-top: 5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .AboutSection {
+    max-width: 100% !important;
+
+    .positions {
+      .info_post {
+        .info {
+          width: 100%;
+        }
+      }
+    }
+
+    .skillsinfo,
+    .positions,
+    .eductionsInfo,
+    .ResumeCV,
+    .PersonalInfomatios,
+    .About,
+    .language {
+      @include smallDevice();
+    }
+    .About {
+      margin-top: 5rem;
+    }
+  }
+}

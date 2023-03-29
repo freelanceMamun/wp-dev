@@ -1,0 +1,61 @@
+$myBtnColor: #7f55da;
+$textColor: #303642;
+$ptextColor: #7e8492;
+$LinkColor: #6c589e;
+
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+.ProjectCart {
+  background-color: #fff;
+  border: 0.5px solid #e7e7e7;
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 0px 3px 20px #ecebeb;
+  }
+  border-radius: 5px;
+
+  .Project {
+    padding: 18px;
+    .date {
+      margin: 15px 0 15px 0;
+      font-size: 14px;
+      color: $ptextColor;
+    }
+  }
+  .project-logo {
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      box-shadow: 0px 3px 20px #f8f4f4;
+    }
+  }
+  .project-title {
+    h6 {
+      color: $textColor;
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    p {
+      color: $ptextColor;
+      font-size: 14px;
+    }
+  }
+  .showlink {
+    border-top: 0.5px solid #e7e7e7;
+    padding: 20px 0;
+    a {
+      text-decoration: none;
+      width: 105px;
+      color: $LinkColor;
+      font-weight: 600;
+      font-size: 14px;
+      margin-left: auto;
+      display: block;
+    }
+  }
+}

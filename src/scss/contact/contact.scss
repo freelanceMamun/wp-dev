@@ -1,0 +1,188 @@
+$myBtnColor: #7f55da;
+$textColor: #303642;
+$ptextColor: #7e8492;
+$LinkColor: #6c589e;
+
+@mixin btn {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.ContactInforamation {
+  width: 100%;
+  transition: all 0.3s;
+  background-color: #fdfdff;
+
+  .container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .row {
+      width: 1120px;
+    }
+
+    .InfoSide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      .shape {
+        bottom: -7%;
+        right: 1px;
+        position: absolute;
+      }
+
+      h1 {
+        font-weight: 700;
+        font-size: 46px;
+        margin-bottom: 10px;
+      }
+      .text1 {
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      .emai {
+        background-color: #fff;
+        box-shadow: 3px 3px 20px #f1eeee6e;
+        border: 0.5px solid #f0f0f0;
+        padding: 12px;
+        border-radius: 5px;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        .icons {
+          width: 35px;
+          height: 35px;
+          background-color: #f7f4f4;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 5px;
+          color: #7f55da;
+        }
+        p {
+          display: flex;
+          flex-direction: column;
+          span {
+            font-weight: 700;
+
+            &:nth-child(2) {
+              color: $myBtnColor;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contactForm {
+    background-color: #fff;
+    box-shadow: 1px 1px 20px #f1eeee6e;
+    padding: 25px;
+    border: 0.5px solid #f0f0f0;
+    border-radius: 12px;
+    position: relative;
+
+    .signinBtn {
+      position: absolute;
+      left: 20%;
+      bottom: 25px;
+    }
+    h3 {
+      font-weight: 600;
+      font-size: 24px;
+    }
+    .inputbox {
+      margin: 13px 0;
+      padding: 8px 10px;
+      border: 0.5px solid #f0f0f0;
+      background-color: #f7f6fe;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      label {
+        font-weight: 600;
+        font-size: 14px;
+        color: $LinkColor;
+      }
+
+      textarea {
+        resize: none;
+        height: 100px;
+      }
+      input,
+      textarea {
+        outline: none;
+        border: none;
+        background-color: transparent;
+        &::placeholder {
+          font-size: 13px;
+
+          color: $ptextColor;
+        }
+      }
+    }
+
+    button {
+      @include btn();
+      background-color: $myBtnColor;
+      color: #fff;
+      padding: 5px 18px;
+      box-shadow: 2px 4px 32px #6c589e8c;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .ContactInforamation {
+    position: relative;
+    max-width: 100% !important;
+    .container {
+      margin-top: 5rem;
+      .InfoSide {
+        .emai {
+          width: 100%;
+        }
+        h1 {
+          font-size: 33px;
+        }
+        .shape {
+          bottom: -22%;
+          width: 100px;
+          right: 3%;
+        }
+      }
+    }
+
+    .contactForm {
+      margin-top: 4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .ContactInforamation {
+    position: relative;
+    max-width: 100% !important;
+
+    .container {
+      .InfoSide {
+        display: initial !important;
+        margin-bottom: 2rem;
+
+        .emai {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .ContactInforamation {
+    position: relative;
+    max-width: 100% !important;
+  }
+}

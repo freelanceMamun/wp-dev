@@ -1,0 +1,253 @@
+$myBtnColor: #7f55da;
+$textColor: #303642;
+$ptextColor: #7e8492;
+$LinkColor: #6c589e;
+
+.myhomeContainer {
+  width: 100%;
+  transition: all 0.3s ease;
+
+  .divider {
+    background-image: linear-gradient(
+      to right top,
+      #e5ccea,
+      #dfc4ea,
+      #d9bbea,
+      #d1b3ea,
+      #c8aceb,
+      #c3a8ec,
+      #bea4ee,
+      #b9a0ef,
+      #b89df1,
+      #b79bf4,
+      #b598f6,
+      #b495f8
+    );
+    height: 200px;
+    .navToggleBtn {
+      color: #fff;
+      padding: 2px;
+      width: 25px;
+      display: block;
+      cursor: pointer;
+      position: absolute;
+      top: 0%;
+      right: 8%;
+      font-size: 35px;
+    }
+  }
+  .ExprienceDescriptions {
+    margin: 0 25px;
+    border-bottom: 0.5px solid #e7e7e7;
+
+    h4 {
+      font-size: 20px;
+      color: $textColor;
+    }
+    p {
+      font-size: 15px;
+      color: $ptextColor;
+    }
+  }
+
+  .userProfileContent {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: -65px;
+    margin-bottom: 35px;
+
+    .imageOrTitle {
+      display: flex;
+
+      .image {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0px 3px 20px #ddd;
+        img {
+          padding: 4px;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .nameContent {
+        margin-left: 22px;
+        align-self: end;
+        .name {
+          h4 {
+            font-size: 20px;
+            color: $textColor;
+          }
+          p {
+            color: #7e8492;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+  .infoBtn {
+    button {
+      outline: none;
+      border: 0.5px solid #e7e7e7;
+      padding: 5px 12px;
+      border-radius: 5px;
+      margin-right: 8px;
+      font-size: 15px;
+      background-color: #fff;
+      &:nth-child(3) {
+        background-color: $myBtnColor;
+        color: #fff;
+      }
+    }
+  }
+
+  .aboutSrotDis {
+    margin: 25px 25px;
+
+    .aboutMe {
+      h4 {
+        font-size: 20px;
+        color: $textColor;
+      }
+      p {
+        color: $ptextColor;
+        font-size: 15px;
+        line-height: 24px;
+      }
+      a {
+        text-decoration: none;
+        color: $LinkColor;
+        font-weight: 600;
+      }
+    }
+    .address,
+    .resume,
+    .website,
+    .Email {
+      margin-top: 10px;
+      margin-bottom: 25px;
+
+      h5 {
+        color: #848a96;
+        font-size: 16px;
+      }
+      p {
+        font-weight: 500;
+        color: #303642;
+        a {
+          color: $LinkColor !important;
+          font-size: 14px;
+          font-weight: 600;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .projectCartD,
+  .showProjectDemo,
+  .HappyClient {
+    margin: 25px 25px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .myhomeContainer {
+    max-width: 100% !important;
+
+    .userProfileContent {
+      flex-direction: column;
+      padding: 0 15px;
+      margin-bottom: 35px;
+      align-items: start;
+
+      .mySocilInfo {
+        .infoBtn {
+          margin-left: 10px;
+        }
+      }
+
+      .imageOrTitle {
+        margin-bottom: 1.4rem;
+        flex-direction: column;
+
+        .image {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .showProjectDemo {
+      .filterBtn {
+        .listItem {
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 10px;
+        }
+      }
+    }
+
+    .HappyClient {
+      margin: 15px 15px;
+      video {
+        max-width: 100%;
+      }
+      .review_item {
+        padding: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .myhomeContainer {
+    max-width: 100% !important;
+
+    .userProfileContent {
+      flex-direction: column;
+      align-items: start;
+
+      .imageOrTitle {
+        margin-bottom: 1.4rem;
+      }
+      .mySocilInfo {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .myhomeContainer {
+    max-width: 100% !important;
+    video {
+      max-width: 100%;
+      margin: auto;
+      width: 100%;
+    }
+
+    .userProfileContent {
+      flex-direction: column;
+      align-items: start;
+
+      .imageOrTitle {
+        margin-bottom: 1.4rem;
+      }
+      .mySocilInfo {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .myhomeContainer {
+    max-width: 100% !important;
+  }
+}
+
+video {
+  max-width: 100%;
+}
